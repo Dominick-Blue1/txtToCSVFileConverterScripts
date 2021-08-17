@@ -1,17 +1,17 @@
-import csv
-import glob
 import os
+import glob
+import csv
+import pandas as pd
 
-directory = raw_input("INPUT Folder:")
-output = raw_input("OUTPUT Folder:")
+# giving directory name
+dirname = '/Users/dblue/PycharmProjects/hmg3/txtToCSVFileConverter/batchTextFiles/7-21-Planned-Solar-Outage'
 
-txt_files = os.path.join(directory, '*.txt')
+# giving file extension
+ext = ('.txt')
 
-for txt_file in glob.glob(txt_files):
-    with open(txt_file, "rb") as input_file:
-        in_txt = csv.reader(input_file, delimiter='=')
-        filename = os.path.splitext(os.path.basename(txt_file))[0] + '.csv'
-
-        with open(os.path.join(output, filename), 'wb') as output_file:
-            out_csv = csv.writer(output_file)
-            out_csv.writerows(in_txt)
+# iterating over all files
+for files in os.listdir(dirname):
+    if files.endswith(ext):
+        print(files)  # printing file name of desired extension
+    else:
+        continue
