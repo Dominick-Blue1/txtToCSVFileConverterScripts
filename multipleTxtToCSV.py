@@ -4,7 +4,7 @@ import csv
 import pandas as pd
 
 # giving directory name
-dirname = '/Users/dblue/PycharmProjects/hmg3/txtToCSVFileConverter/batchTextFiles/7-21-Planned-Solar-Outage'
+dirname = 'INSERT DIRECTORY PATH'
 
 # giving file extension
 ext = ('.txt')
