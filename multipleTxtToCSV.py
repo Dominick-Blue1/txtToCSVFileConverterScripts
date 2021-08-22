@@ -1,18 +1,18 @@
 import os
-import glob
 import csv
 import pandas as pd
 
-# giving directory name
-dirname = 'INSERT DIRECTORY PATH'
+directory = os.listdir('/Users/dblue/PycharmProjects/hmg3/txtToCSVFileConverter/batchTextFiles/7-21-Planned-Solar-Outage')
 
-# giving file extension
-ext = '.txt'
-
+for file in directory:
+    if file.endswith('.txt'):
+        print(file)
+        file.replace('.txt', '.csv')
+        print(file)
 # iterating over all files
-for files in os.listdir(dirname):
-    if files.endswith(ext):
-        print(files)  # printing file name of desired extension
+    # for filename in files:
+    #     filepath = subdir + os.sep + filename
+    #
+    #     if filepath.endswith(".jpg") or filepath.endswith(".png"):
+    #         print (filepath)
 
-    else:
-        continue
